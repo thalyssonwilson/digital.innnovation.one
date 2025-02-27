@@ -32,16 +32,14 @@ public class OrdenacaoNumeros {
     public void ordenarDescendente(){
         List<Numero> numerosOrdenadosDescendente = new ArrayList<>(listaDeNumeros);
         
+        // ordena a lista pelo metodo sort() da interface LIST
+        // depois reverte a ordem pelo metodo reverseOrder() da classe Colletions
         numerosOrdenadosDescendente.sort(Collections.reverseOrder());
 
-        //Collections.sort(numerosOrdenadosDescendente);    // primeiro ordena ascendentes
-       // Collections.reverse(numerosOrdenadosDescendente); // segundo reverte a ordem p/ ter descendentes
         for (Numero n : numerosOrdenadosDescendente) {
             System.out.printf(n.getNumero()+" ");
         }
     }
-
-    
 
 
     // NÃO SOLICITADO: exibe todos os números adicionados na lista
